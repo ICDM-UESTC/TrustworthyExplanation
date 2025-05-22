@@ -39,7 +39,7 @@ We validate our findings through extensive experiments across diverse datasets, 
 ├── model.py        # GNN backbone (GIN/GCN)
 ├── outputs         # checkpoints/logs
 ├── README.md
-├── run.sh          
+├── run.sh 
 └── trainer.py      # train/valid/test
 ````
 
