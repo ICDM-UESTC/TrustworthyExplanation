@@ -61,8 +61,8 @@ pip install -r requirements.txt
 
 We evaluate our method on a variety of datasets:
 
-* Synthetic: BA-Shapes
-* Molecular: MUTAG, 3MR, BENZENE
+* Synthetic: BA-2MOTIFS
+* Molecular: MUTAGENICITY, 3MR, BENZENE
 
 Datasets will be automatically processed on first run.
 
