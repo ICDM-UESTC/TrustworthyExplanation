@@ -2,8 +2,8 @@
 
 **💻 Official implementation of our ICML 2025 paper: Redundancy Undermines the Trustworthiness of Self-Interpretable GNNs**
 
-> 🧠 Authors: [Wenxin Tai](), [Ting Zhong](), [Goce Trajcevski](), [Fan Zhou]()  
-> 📍 Institutions: [University of Electronic Science and Technology of China]() & [Iowa State University]()  
+> 🧠 Authors: [Wenxin Tai](https://scholar.google.com/citations?user=YyxocAIAAAAJ&hl=en), [Ting Zhong](https://scholar.google.com/citations?user=Mdr0XDkAAAAJ&hl=en), [Goce Trajcevski](https://scholar.google.com/citations?user=Avus2kcAAAAJ&hl=en), [Fan Zhou](https://scholar.google.com/citations?user=Ihj2Rw8AAAAJ&hl=en)  
+> 📍 Institutions: University of Electronic Science and Technology of China & Iowa State University  
 > 🔗 [Paper Link](https://arxiv.org/abs/...) (to be updated)  
 > 🤖 This repository is maintained by [ICDM Lab](https://www.icdmlab.com/).
 
@@ -92,7 +92,7 @@ python main.py --run_time 10 --dataset ba_2motifs --method gsat --test_by_sample
 ## 📁 Pretrained Checkpoints
 We provide **pretrained model checkpoints** and **training logs** for quick evaluation and reproduction.  
 
-You can download them from the [Releases](https://github.com/ICDM-UESTC/TrustworthyExplanation/releases) tab.
+You can download them from the [Releases](https://github.com/ICDM-UESTC/TrustworthyExplanation/releases) tab. (to be updated)
 
 To use the checkpoint, place it in the `outputs/checkpoints/` folder and run:
 ```bash
@@ -126,4 +126,4 @@ If you find this work useful, please cite us:
 
 ## 📬 Contact
 
-If you have questions or suggestions, feel free to reach out via GitHub Issues or email: [wxtai [AT] outlook [DOT] com](https://github.com/judiebig)
+If you have questions or suggestions, feel free to reach out via GitHub Issues or email: wxtai [AT] outlook [DOT] com
