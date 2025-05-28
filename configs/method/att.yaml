@@ -5,9 +5,9 @@ ba_2motifs:
   num_class: 2
   multi_label: false
 
-  backbone_name: gin
+  backbone_name: gcn
   hidden_size: 64
-  n_layers: 2
+  n_layers: 3  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 10
@@ -34,9 +34,9 @@ mutag:
   num_class: 2
   multi_label: false
 
-  backbone_name: gin
+  backbone_name: gcn
   hidden_size: 64
-  n_layers: 2
+  n_layers: 3  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 14
@@ -63,9 +63,9 @@ benzene:
   num_class: 2
   multi_label: false
 
-  backbone_name: gin
+  backbone_name: gcn
   hidden_size: 64
-  n_layers: 2
+  n_layers: 3  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 14
@@ -92,9 +92,9 @@ mr:
   num_class: 2
   multi_label: false
 
-  backbone_name: gin
+  backbone_name: gcn
   hidden_size: 64
-  n_layers: 2
+  n_layers: 3  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 14

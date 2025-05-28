@@ -5,7 +5,7 @@
 > 🧠 Authors: [Wenxin Tai](https://scholar.google.com/citations?user=YyxocAIAAAAJ&hl=en), [Ting Zhong](https://scholar.google.com/citations?user=Mdr0XDkAAAAJ&hl=en), [Goce Trajcevski](https://scholar.google.com/citations?user=Avus2kcAAAAJ&hl=en), [Fan Zhou](https://scholar.google.com/citations?user=Ihj2Rw8AAAAJ&hl=en)  
 > 📍 Institutions: University of Electronic Science and Technology of China & Iowa State University  
 > 🔗 [Paper Link](https://arxiv.org/abs/...) (to be updated)  
-> 🤖 This repository is maintained by [ICDM Lab](https://www.icdmlab.com/).
+> 🤖 This repository is maintained by [ICDM Lab](https://www.icdmlab.com/)
 
 ---
 
@@ -64,7 +64,7 @@ We evaluate our method on a variety of datasets:
 * Synthetic: BA-2MOTIFS
 * Molecular: MUTAGENICITY, 3MR, BENZENE
 
-Datasets will be automatically processed on first run.
+Datasets can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1RaOKbWABerHfea_sJZGIbXSy0FcOzK0O?usp=sharing), place all datasets (e.g., `ba_2motifs`, `benzene`, `mr`, `mutag`) in the `datasets/` folder.
 
 ---
 

@@ -269,7 +269,6 @@ class BaseTrainer(object):
 
     @torch.inference_mode()
     def calculate_shd(self, dataset_name, method_name, ensemble_numbers=[0]):
-        # if not os.path.exists(f'./outputs/temp_data/shd_{method_name}_{dataset_name}.pt'):
         import copy
         ori_data = []
         for data in self.dataloader['test_by_sample']:
@@ -303,15 +302,12 @@ class BaseTrainer(object):
 
         for data in tqdm(ori_data):
             edge_atts = [data[f'edge_att_{i}'] for i in range(len(ensemble_numbers))]
-
             assert all(len(att) == len(edge_atts[0]) for att in edge_atts), "All edge_att must have the same length"
-
             edge_atts_bin = [torch.where(att > 0.5, one, zero) for att in edge_atts]
-
             n = len(edge_atts_bin)
             scores = []
 
-            combinations_list = combinations(range(n), 1)
+            combinations_list = list(combinations(range(n), 1))
             for pair in combinations(combinations_list, 2):
                 if set(pair[0]).isdisjoint(pair[1]):
                     # print(pair)
@@ -322,7 +318,6 @@ class BaseTrainer(object):
                     hamming_dist = torch.sum(edge_atts_first_bin != edge_atts_second_bin).item()
                     score = hamming_dist
                     scores.append(score)
-
             average_score = np.mean(scores)
             std_score = np.std(scores)
             all_scores.append(average_score)
@@ -338,15 +333,12 @@ class BaseTrainer(object):
 
         for data in tqdm(ori_data):
             edge_atts = [data[f'edge_att_{i}'] for i in range(len(ensemble_numbers))]
-
             assert all(len(att) == len(edge_atts[0]) for att in edge_atts), "All edge_att must have the same length"
-
             edge_atts_bin = [torch.where(att > 0.5, one, zero) for att in edge_atts]
-
             n = len(edge_atts_bin)
             scores = []
 
-            combinations_list = combinations(range(n), int(0.5 * n))
+            combinations_list = list(combinations(range(n), int(0.5 * n)))
             for pair in combinations(combinations_list, 2):
                 if set(pair[0]).isdisjoint(pair[1]):
                     # print(pair)
@@ -712,7 +704,7 @@ class SIZETrainer(BaseTrainer):
         return r
 
     def get_sparsity_c(self, current_epoch):
-        c = self.sparsity_mask_coef * (current_epoch+1) * 2 / 100
+        c = self.sparsity_mask_coef * (current_epoch+1) / 10
         if c > self.sparsity_mask_coef:
             c = self.sparsity_mask_coef
         return c
@@ -891,7 +883,7 @@ class SIZETrainer(BaseTrainer):
             print(f"epoch: {e}, "
                   f"train loss: {train_loss:.4f}, train acc {train_metrics['acc']:.4f}, "
                   f"valid loss: {valid_loss:.4f}, valid acc {valid_metrics['acc']:.4f}")
-            if (e > 10) and (
+            if (self.c == self.sparsity_mask_coef) and (e > 10) and (
                     (valid_metrics['acc'] > self.best_valid_score) or
                     (valid_metrics['acc'] == self.best_valid_score and valid_loss < self.lowest_valid_loss)):
                 self.save_model(self.checkpoints_path)

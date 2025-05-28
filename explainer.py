@@ -53,12 +53,4 @@ def get_explainer(method_name, cfg):
     explainer = ExtractorMLP(hidden_size=cfg['hidden_size'],
                              learn_edge_att=cfg['learn_edge_att'],
                              dropout_p=cfg['explainer_dropout_p'])
-    # if method_name == 'gsat':
-    #     explainer = ExtractorMLP(hidden_size=cfg['hidden_size'],
-    #                              learn_edge_att=cfg['learn_edge_att'],
-    #                              dropout_p=cfg['explainer_dropout_p'])
-    # elif method_name == 'gsat_ca':
-    #     explainer = ExtractorMLP(hidden_size=cfg['hidden_size'],
-    #                              learn_edge_att=cfg['learn_edge_att'],
-    #                              dropout_p=cfg['explainer_dropout_p'])
     return explainer
