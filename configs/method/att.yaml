@@ -5,9 +5,9 @@ ba_2motifs:
   num_class: 2
   multi_label: false
 
-  backbone_name: gcn
+  backbone_name: gin
   hidden_size: 64
-  n_layers: 3  # gin 2 gcn 3
+  n_layers: 2  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 10
@@ -27,16 +27,15 @@ ba_2motifs:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 1
 
 mutag:
   dataset_name: mutag
   num_class: 2
   multi_label: false
 
-  backbone_name: gcn
+  backbone_name: gin
   hidden_size: 64
-  n_layers: 3  # gin 2 gcn 3
+  n_layers: 2  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 14
@@ -56,16 +55,15 @@ mutag:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 0.5
 
 benzene:
   dataset_name: benzene
   num_class: 2
   multi_label: false
 
-  backbone_name: gcn
+  backbone_name: gin
   hidden_size: 64
-  n_layers: 3  # gin 2 gcn 3
+  n_layers: 2  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 14
@@ -85,16 +83,15 @@ benzene:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 0.5
 
 mr:
   dataset_name: mr
   num_class: 2
   multi_label: false
 
-  backbone_name: gcn
+  backbone_name: gin
   hidden_size: 64
-  n_layers: 3  # gin 2 gcn 3
+  n_layers: 2  # gin 2 gcn 3
   dropout_p: 0.3
   atom_encoder: false
   node_attr_dim: 14
@@ -114,4 +111,3 @@ mr:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 1

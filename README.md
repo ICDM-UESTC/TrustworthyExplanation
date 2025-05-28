@@ -92,7 +92,7 @@ python main.py --run_time 10 --dataset ba_2motifs --method gsat --test_by_sample
 ## 📁 Pretrained Checkpoints
 We provide **pretrained model checkpoints** and **training logs** for quick evaluation and reproduction.  
 
-You can download them from the [Releases](https://github.com/ICDM-UESTC/TrustworthyExplanation/releases) tab. (to be updated)
+You can download them from the [Releases](https://github.com/ICDM-UESTC/TrustworthyExplanation/releases) tab
 
 To use the checkpoint, place it in the `outputs/checkpoints/` folder and run:
 ```bash

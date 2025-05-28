@@ -83,10 +83,9 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--run_time', type=int, default=1, help='suggest 1 or 10')
-    parser.add_argument('--dataset', type=str, default='ba_2motifs', help='dataset used')
+    parser.add_argument('--dataset', type=str, default='ba_2motifs', help='{ba_2motifs, mr, benzene, mutag}')
     parser.add_argument('--method', type=str, default='gsat', help='{att, cal, size, gsat}')
     parser.add_argument('--test_by_sample_ensemble', action='store_true', help='')
-    parser.add_argument('--test_by_sample_ensemble_multi', action='store_true', help='')
     parser.add_argument('--calculate_shd', action='store_true', help='')
     parser.add_argument('--calculate_shd_multi', action='store_true', help='')
 
@@ -99,10 +98,7 @@ if __name__ == "__main__":
         OmegaConf.set_struct(cfg, False)
         cfg.test_by_sample_ensemble = args.test_by_sample_ensemble if isinstance(
             args.test_by_sample_ensemble, bool) else False
-        cfg.test_by_sample_ensemble_multi = args.test_by_sample_ensemble_multi if isinstance(
-            args.test_by_sample_ensemble_multi, bool) else False
         cfg.calculate_shd = args.calculate_shd if isinstance(args.calculate_shd, bool) else False
-        cfg.calculate_shd_multi = args.calculate_shd_multi if isinstance(args.calculate_shd_multi, bool) else False
         '''load dataset'''
         dataset = get_dataset(dataset_dir=cfg.dataset.dataset_root,
                               dataset_name=cfg.dataset.dataset_name,

@@ -1,4 +1,4 @@
-method_name: size
+method_name: att_ea
 
 ba_2motifs:
   dataset_name: ba_2motifs
@@ -27,9 +27,7 @@ ba_2motifs:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 1
-  sparsity_mask_coef: 5e-2
-  sparsity_ent_coef: 0 # 1e-4
+  ea_loss_coef: 1
 
 mutag:
   dataset_name: mutag
@@ -58,9 +56,8 @@ mutag:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 1
-  sparsity_mask_coef: 5e-2
-  sparsity_ent_coef: 0 # 1e-4
+  ea_loss_coef: 1
+
 
 benzene:
   dataset_name: benzene
@@ -89,9 +86,7 @@ benzene:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 1
-  sparsity_mask_coef: 5e-2
-  sparsity_ent_coef: 0 # 1e-4
+  ea_loss_coef: 1
 
 mr:
   dataset_name: mr
@@ -120,6 +115,4 @@ mr:
   decay_interval: 10
 
   ce_loss_coef: 1
-  reg_loss_coef: 1
-  sparsity_mask_coef: 5e-2  #
-  sparsity_ent_coef: 0 # 1e-4
+  ea_loss_coef: 1
