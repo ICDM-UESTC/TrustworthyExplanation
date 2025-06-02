@@ -1,0 +1,12 @@
+#hydra:
+#  run:
+##    dir: ""
+#    dir: logs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - dataset: ba_2motifs
+  - method: gsat
+  - _self_
+
+device_id: 0
+save_dir: ./outputs

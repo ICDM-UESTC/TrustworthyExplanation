@@ -1,0 +1,113 @@
+method_name: att_swa
+
+ba_2motifs:
+  dataset_name: ba_2motifs
+  num_class: 2
+  multi_label: false
+
+  backbone_name: gin
+  hidden_size: 64
+  n_layers: 2  # gin 2 gcn 3
+  dropout_p: 0.3
+  atom_encoder: false
+  node_attr_dim: 10
+  edge_attr_dim: 0
+  use_edge_attr: true
+  learn_edge_att: true
+  explainer_dropout_p: 0.5
+
+  epochs: 100
+  lr: 1.0e-3
+  weight_decay: 0
+  batch_size: 128
+
+  decay_r: 0.1
+  init_r: 0.9
+  final_r: 0.5
+  decay_interval: 10
+
+  ce_loss_coef: 1
+
+mutag:
+  dataset_name: mutag
+  num_class: 2
+  multi_label: false
+
+  backbone_name: gin
+  hidden_size: 64
+  n_layers: 2  # gin 2 gcn 3
+  dropout_p: 0.3
+  atom_encoder: false
+  node_attr_dim: 14
+  edge_attr_dim: 0
+  use_edge_attr: true
+  learn_edge_att: false
+  explainer_dropout_p: 0.5
+
+  epochs: 100
+  lr: 1.0e-3
+  weight_decay: 0
+  batch_size: 128
+
+  decay_r: 0.1
+  init_r: 0.9
+  final_r: 0.5
+  decay_interval: 10
+
+  ce_loss_coef: 1
+
+benzene:
+  dataset_name: benzene
+  num_class: 2
+  multi_label: false
+
+  backbone_name: gin
+  hidden_size: 64
+  n_layers: 2  # gin 2 gcn 3
+  dropout_p: 0.3
+  atom_encoder: false
+  node_attr_dim: 14
+  edge_attr_dim: 0
+  use_edge_attr: true
+  learn_edge_att: false
+  explainer_dropout_p: 0.5
+
+  epochs: 100
+  lr: 1.0e-3
+  weight_decay: 0
+  batch_size: 128
+
+  decay_r: 0.1
+  init_r: 0.9
+  final_r: 0.5
+  decay_interval: 10
+
+  ce_loss_coef: 1
+
+mr:
+  dataset_name: mr
+  num_class: 2
+  multi_label: false
+
+  backbone_name: gin
+  hidden_size: 64
+  n_layers: 2  # gin 2 gcn 3
+  dropout_p: 0.3
+  atom_encoder: false
+  node_attr_dim: 14
+  edge_attr_dim: 0
+  use_edge_attr: true
+  learn_edge_att: false
+  explainer_dropout_p: 0.5
+
+  epochs: 100
+  lr: 1.0e-3
+  weight_decay: 0
+  batch_size: 128
+
+  decay_r: 0.1
+  init_r: 0.9
+  final_r: 0.5
+  decay_interval: 10
+
+  ce_loss_coef: 1
