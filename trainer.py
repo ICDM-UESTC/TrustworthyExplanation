@@ -107,7 +107,7 @@ class BaseTrainer(object):
                     emb = self.model.get_emb(x=data.x, edge_index=data.edge_index, edge_attr=data.edge_attr,
                                              batch=data.batch)
                     att_log_logit = self.explainer(emb, data.edge_index, data.batch)
-                    att = self.concrete_sample(att_log_logit, training=True)
+                    att = self.concrete_sample(att_log_logit, training=False)
 
                     c_edge_att = self.process_att_to_edge_att(data, att)
                     s_edge_att = 1 - c_edge_att
